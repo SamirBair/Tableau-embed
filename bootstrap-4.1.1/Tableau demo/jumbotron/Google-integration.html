@@ -17,17 +17,19 @@
     <script type="text/javascript">
         function initViz() {
             var containerDiv = document.getElementById("vizContainer"),
-                url = "https://public.tableau.com/views/Umsatz/Kategorie-Umsatz",
+                url = "https://public.tableau.com/views/GoogleSheets_2/Dashboard1",
                 options = {
                     hideTabs: true,
                     hideToolbar: true,
                     onFirstInteractive: function () {
-                        console.log("Run this code when the viz has finished loading.");
+                        //setInterval(function () {viz.refreshDataAsync() }, 3000);
                     }
                 };
             // Create a viz object and embed it in the container div.
             var viz = new tableau.Viz(containerDiv, url, options); 
+            
         }
+
     </script>
 
     <script type="text/javascript">
@@ -73,14 +75,14 @@
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./Dashboard.html">Dashboard</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./Google-integration.html">Google Integration</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Google Integration <span class="sr-only">(current)</span></a>
           </li>  
           <li class="nav-item">
             <a class="nav-link" href="#">Daten anbinden</a>
@@ -98,23 +100,19 @@
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
         <div class="container">
-          <h1 class="display-3">Tableau Inhalte einbetten!</h1>
-          <p>Stellen Sie Ihre Daten mit Tableau dar und betten Sie die interaktiven Visualisierungen auf Ihrer eigenen Website ein.</p>
+          <h1 class="display-3">Tableau mit Google verknüpfen</h1>
+          <p>Mit Google-Produkten werden viele Geschäfte aufgebaut. Binden Sie es daher einfach in Ihre Tableau Umgebung mit ein.</p>
         </div>
       </div>
 
       <div class="container">
         <!-- Example row of columns -->
         <div class="row">
-          <div class="col-md-6">
-            <h2>Umsatz</h2>
-            <div id="vizContainer" style="height:400px;"></div>
+          <div class="col-md-12">
+            <h2>Google Tabellen füllen</h2>
+            <div id="vizContainer" style="height:700px;"></div>
           </div>
         
-          <div class="col-md-6">
-            <h2>Gewinn</h2>
-            <div id="Gewinn" style="height:400px;"></div>
-          </div>
 
         </div>
 
@@ -122,7 +120,7 @@
 
         <!-- Komplette Breite -->
           <div class="col-md-12">
-            <h2>Gewinn wöchentlich</h2>
+            <h2>Google Streetview einbinden</h2>
             <div id="Gewinn-zeitlich" style="height:400px;"></div>
           </div>
         <hr>
